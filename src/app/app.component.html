@@ -8,17 +8,15 @@
 
       <p class="has-text-centered"> 
         <span *ngFor="let letter of randomText.split(''); let i = index;">
-          {{ letter }}{{ enteredText[i] }}</span>> <!---Split randomText so each character represents an element in an array-->
+         </span> <!---Split randomText so each character represents an element in an array-->
       </p>
 
       <br>
 
       <div class="field">
-        <input class="input" (input)="onInput($event)" />
+        <input class="input" type="text" (input)="onInput($event)">
       </div>
 
-
-      
       <div *ngIf="randomText===enteredText"  class="box has-text-centered">
         <h1 class="title">Success!</h1>
       </div>
